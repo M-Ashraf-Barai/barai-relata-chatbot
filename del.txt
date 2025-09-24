@@ -1,0 +1,3 @@
+
+
+F:\my_web_sites\barai_family_teller>uv add langchain langchain-ollama pandas langchain-community faiss-cpu
