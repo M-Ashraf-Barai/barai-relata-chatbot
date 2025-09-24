@@ -19,4 +19,5 @@ It uses **LangChain + Groq LLM + FAISS vector store + Ollama embeddings** to ret
 - [LangChain](https://www.langchain.com/) – AI agent framework  
 - [langchain_groq](https://github.com/groq/groq-langchain) – Groq LLM integration  
 - [Streamlit](https://streamlit.io/) – Interactive UI  
+- [langchain-google-genai](https://python.langchain.com/docs/integrations/google/) –Google Gemini Embeddings
 

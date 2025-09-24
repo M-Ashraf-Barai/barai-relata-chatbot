@@ -1,6 +1,4 @@
-# ----------------------------
-# Python
-# ----------------------------
+
 __pycache__/
 *.pyc
 *.pyo
@@ -10,36 +8,23 @@ __pycache__/
 dist/
 build/
 
-# ----------------------------
-# Virtual environments
-# ----------------------------
+
 .venv/
 venv/
 env/
 *.env
 
-# ----------------------------
-# Project-specific
-# ----------------------------
-# Environment variables
+
 .env
 .env.*
 
-# FAISS index
-faiss_index/
-*.faiss
-*.pkl
 
-# Local database or cache
 *.db
 *.sqlite3
 .cache/
 logs/
 
-# ----------------------------
-# OS-specific
-# ----------------------------
-# macOS
+
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -48,15 +33,12 @@ logs/
 Thumbs.db
 Desktop.ini
 
-# Linux
+
 *~
 
-# ----------------------------
-# Editors
-# ----------------------------
+
 .vscode/
 .idea/
 *.swp
 *.swo
-".env" 
-"faiss_index/" 
+

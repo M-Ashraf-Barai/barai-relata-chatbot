@@ -8,8 +8,10 @@ dependencies = [
     "faiss-cpu>=1.12.0",
     "langchain>=0.3.27",
     "langchain-community>=0.3.29",
+    "langchain-google-genai>=2.1.12",
     "langchain-groq>=0.3.8",
     "langchain-ollama>=0.3.8",
+    "langchain-openai>=0.3.33",
     "python-dotenv>=1.1.1",
     "streamlit>=1.50.0",
 ]

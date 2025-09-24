@@ -1,19 +1,4 @@
 
-    
-    
-    
-    
-    
-
-  
-   
-        
-
-
-
-
-
-
 import os
 import streamlit as st
 from langchain_groq import ChatGroq
@@ -21,11 +6,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from vector import retriever
 from dotenv import load_dotenv
 
-# ✅ Load API key
+# Load API key
 load_dotenv()
 api_key = os.getenv("GROQ_API_KEY")
 
-# ✅ Set page config
+# Set page config
 st.set_page_config(page_title="Barai Relata Chatbot", page_icon="👨‍👩‍👧‍👦", layout="centered")
 st.title("👨‍👩‍👧‍👦 Barai Relata Chatbot")
 st.markdown(
@@ -58,14 +43,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# ✅ Model setup
+# Model setup
 model = ChatGroq(
     model="meta-llama/llama-4-scout-17b-16e-instruct",
     api_key=api_key,
     streaming=True  # enable streaming
 )
 
-# ✅ Prompt template
+
+# Prompt template
 template = """
 You are a family knowledge assistant.
     - Respond in a fun, casual, and witty tone. Add light jokes when possible, but keep answers short and clear.
@@ -99,16 +85,16 @@ Question: {question}
 
 prompt = ChatPromptTemplate.from_template(template)
 
-# ✅ Keep chat history
+# Keep chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# ✅ Display previous messages
+# Display previous messages
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ✅ Chat input box
+# Chat input box
 if question := st.chat_input("Ask about your family..."):
     # Add user message to history
     st.session_state.messages.append({"role": "user", "content": question})
