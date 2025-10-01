@@ -24,8 +24,8 @@ with open("my_family.csv", "r", encoding="utf-8") as f:
 
 # Split into chunks for better embedding performance
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=500,  # you can adjust
-    chunk_overlap=50
+    chunk_size=1000,  # you can adjust
+    chunk_overlap=100
 )
 chunks = text_splitter.split_text(biography_text)
 
